@@ -13,7 +13,7 @@
   --line: rgba(45, 30, 30, 0.16);
   --shadow: 0 24px 70px rgba(45, 30, 30, 0.16);
   --serif: Didot, "Bodoni 72", "Bodoni MT", "Times New Roman", serif;
-  --sans: Montserrat, Avenir, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Poppins", Avenir, "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -29,6 +29,7 @@ body {
   color: var(--ink);
   background: var(--ivory);
   font-family: var(--sans);
+  font-weight: 300;
 }
 
 img {
