@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SEREEN Skin Care ecommerce storefront for radiant beauty and refined skincare rituals.">
+    <title>SEREEN Skin Care</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="SEREEN home">
+        <img src="assets/images/sereen-logo-brown.png" alt="SEREEN">
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#shop">Shop</a>
+        <a href="#ritual">Ritual</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-button" type="button" data-cart-open aria-label="Open cart">
+        <span class="cart-icon" aria-hidden="true">Bag</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-label="SEREEN introduction">
+        <img class="hero-bg" src="assets/images/serum-lifestyle.jpg" alt="SEREEN hydrating facial serum on a warm vanity setting">
+        <div class="hero-content">
+          <img class="hero-logo" src="assets/images/sereen-logo.png" alt="SEREEN">
+          <p>Radiant beauty. Refined for you.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#shop">Shop the ritual</a>
+            <a class="button button-ghost" href="#ritual">Explore benefits</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-strip" aria-label="Brand values">
+        <span>Elegant</span>
+        <span>Feminine</span>
+        <span>Editorial</span>
+        <span>Warm</span>
+        <span>Premium</span>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Brand Essence</p>
+          <h1>Modern skincare with expressive luxury.</h1>
+        </div>
+        <p>SEREEN blends refined femininity with elevated skincare rituals, warm visual storytelling, and formulas designed for a polished daily glow.</p>
+      </section>
+
+      <section class="section product-feature">
+        <div class="feature-copy">
+          <p class="eyebrow">Hero Product</p>
+          <h2>Hydrating Facial Serum</h2>
+          <p>A lightweight glow serum designed to leave skin feeling hydrated, smooth, and luminous without heaviness.</p>
+          <dl class="spec-list">
+            <div>
+              <dt>Size</dt>
+              <dd>30ml / 1 fl. oz</dd>
+            </div>
+            <div>
+              <dt>Finish</dt>
+              <dd>Dewy, soft, radiant</dd>
+            </div>
+            <div>
+              <dt>Ritual</dt>
+              <dd>Apply morning and night</dd>
+            </div>
+          </dl>
+        </div>
+        <img src="assets/images/serum-product.jpg" alt="SEREEN hydrating facial serum bottle">
+      </section>
+
+      <section class="section shop-section" id="shop">
+        <div class="section-heading">
+          <p class="eyebrow">Product Line</p>
+          <h2>Build your SEREEN ritual</h2>
+        </div>
+        <div class="product-grid" data-products></div>
+      </section>
+
+      <section class="section ritual" id="ritual">
+        <div class="section-heading">
+          <p class="eyebrow">Mood & Tone</p>
+          <h2>Refined warmth, everyday radiance.</h2>
+        </div>
+        <div class="ritual-grid">
+          <article>
+            <span>01</span>
+            <h3>Cleanse</h3>
+            <p>Start with a gentle cleanser that leaves skin comfortable and ready for treatment.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Hydrate</h3>
+            <p>Layer serum and mist to keep the complexion fresh, supple, and softly luminous.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Seal</h3>
+            <p>Finish with barrier support to lock in comfort and a healthy-looking glow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="editorial" id="journal">
+        <img src="assets/images/serum-editorial.jpg" alt="SEREEN serum in an editorial skincare setting">
+        <div>
+          <p class="eyebrow">Editorial Beauty</p>
+          <h2>Designed for a warm, feminine glow.</h2>
+          <p>The SEREEN palette moves from sunset red and coral through rose pink and royal violet, grounded by soft neutrals and espresso details.</p>
+        </div>
+      </section>
+
+      <section class="section checkout-section" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Checkout</p>
+          <h2>Reserve your skincare set</h2>
+        </div>
+        <form class="checkout-form" name="sereen-orders" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="sereen-orders">
+          <p class="hidden">
+            <label>Do not fill this out <input name="bot-field"></label>
+          </p>
+          <label>
+            Full name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="4" placeholder="Tell us what you would like to order."></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Submit request</button>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Shopping cart">
+      <div class="cart-panel">
+        <div class="cart-head">
+          <h2>Your Bag</h2>
+          <button type="button" data-cart-close aria-label="Close cart">Close</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <div class="cart-empty" data-cart-empty>Your bag is empty.</div>
+        <div class="cart-summary">
+          <div>
+            <span>Subtotal</span>
+            <strong data-cart-subtotal>$0</strong>
+          </div>
+          <button class="button button-primary" type="button" data-checkout>Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <template id="product-card-template">
+      <article class="product-card">
+        <div class="product-image-wrap">
+          <img src="" alt="">
+        </div>
+        <div class="product-info">
+          <p class="product-category"></p>
+          <h3></h3>
+          <p class="product-description"></p>
+          <div class="product-meta">
+            <span class="product-price"></span>
+            <button type="button" class="add-button">Add to bag</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
